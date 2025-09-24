@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+
+<html manifest="cache.manifest">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="user-scalable=no, width=device-width" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<title>Diplamatic - Mobile Diplomatic License Plate Decoder App</title>
+	<meta name="author" content="David Yanofsky">
+	<meta name="description" content="Diplamatic is an HTML5 web application that decodes diplomatic license plates issued in the United States.">
+	<meta name="keywords" content="Diploamatic, diplomatic, license plate, decode, diplomat, consul, embassy, New York City, Washington DC, UN, app, HTML5">
+	<link rel="stylesheet" href="reset.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="add2home.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<link rel="apple-touch-icon" href="diplamatic.png"/>
+	<link rel="apple-touch-startup-image" href="diplamatic_startup.png" />
+	
+	<script type="text/javascript">
+	var addToHomeConfig = {
+		touchIcon:true
+	};
+	
+//   var cacheStatusValues = [];
+//   cacheStatusValues[0] = 'uncached';
+//   cacheStatusValues[1] = 'idle';
+//   cacheStatusValues[2] = 'checking';
+//   cacheStatusValues[3] = 'downloading';
+//   cacheStatusValues[4] = 'updateready';
+//   cacheStatusValues[5] = 'obsolete';
+//
+//   var cache = window.applicationCache;
+//   cache.addEventListener('cached', logEvent, false);
+//   cache.addEventListener('checking', logEvent, false);
+//   cache.addEventListener('downloading', logEvent, false);
+//   cache.addEventListener('error', logEvent, false);
+//   cache.addEventListener('noupdate', logEvent, false);
+//   cache.addEventListener('obsolete', logEvent, false);
+//   cache.addEventListener('progress', logEvent, false);
+//   cache.addEventListener('updateready', logEvent, false);
+//
+//   function logEvent(e) {
+//       var online, status, type, message;
+//       online = (navigator.onLine) ? 'yes' : 'no';
+//       status = cacheStatusValues[cache.status];
+//       type = e.type;
+//       message = 'online: ' + online;
+//       message+= ', event: ' + type;
+//       message+= ', status: ' + status;
+//       if (type == 'error' && navigator.onLine) {
+//           message+= ' (prolly a syntax error in manifest)';
+//       }
+//       console.log(message);
+//   }
+//
+//   window.applicationCache.addEventListener(
+//       'updateready',
+//       function(){
+//           window.applicationCache.swapCache();
+//           console.log('swap cache has been called');
+//       },
+//       false
+//   );
+//
+//   setInterval(function(){cache.update()}, 10000);
+	</script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" charset="utf-8"></script>
+
+	<script src="add2home.js" type="text/javascript" charset="utf-8"></script>
+	<script src="parseuri.js" type="text/javascript" charset="utf-8"></script>
+	<script src="diploplate.js" type="text/javascript" charset="utf-8"></script>
+	
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-5939575-2']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+	
+</head>
+<body>
+	<div class = "wrapper">
+		<div id = "input">
+		<h1>What License Plate Did You See?</h1>
+		<form id = "tag-form" action = "javascript:onPlateSubmit()">
+			<input type="text" name="tag" id="tag-input"/>
+			<input type="submit" value="Submit" id="submit"/>
+		</form>
+		</div>
+		<div id = "results">
+			<h1 id = "result-holder"></h1>
+			<form id = "submit-form" action = "javascript:pageState();">
+				<input type="submit" value="Enter Another" id="submit"/>
+			</form>
+		</div>
+		<div id = sources>
+		<div id="social">
+			<a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="Diplamatic">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+			</div>	
+		<p>Source: <a href = "http://en.wikipedia.org/wiki/Vehicle_registration_plates_of_the_United_States">Wikipedia</a> and <a href = "http://www.worldlicenceplates.com/usa/US_XCCX.html">Plates Portal</a></p>
+			<p>Disclaimer: Information is provided "as is" with no express or implied warranty for completeness or accuracy.</p>
+		</div>
+	</div>
+    
+	
+
+
+</body>
+</html>

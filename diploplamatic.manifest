@@ -1,0 +1,10 @@
+CACHE MANIFEST
+NETWORK:
+*
+CACHE:
+/index.html
+/results.html
+/diploplate.js
+/parseurl.js
+/reset.css
+/style.css

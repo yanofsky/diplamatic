@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 5.0//EN"
+   "http://www.w3.org/TR/html5/strict.dtd">
+
+<html lang="en" manifest="http://apps.yerit.com/diploplamatic/cache.manifest">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="user-scalable=no, width=device-width" />
+	
+	<title>Diploplamatic - Mobile Diplomatic License Plate Decoder App</title>
+	<meta name="author" content="David Maxwell Yanofsky">
+	<!-- Date: 2011-06-20 -->
+	<link rel="stylesheet" href="reset.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<script src="parseuri.js" type="text/javascript" charset="utf-8"></script>
+	<script src="diploplate.js" type="text/javascript" charset="utf-8"></script>
+	
+	
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-5939575-2']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+</head>
+<body onload = "plateSearch();">
+	<div class = "wrapper">
+		<div id = "results">
+			<h1 id = "result-holder"></h1>
+			<form id = "submit-form" action = "index.html">
+				<input type="submit" value="Enter Another" id="submit"/>
+			</form>
+		</div>
+		<div id = sources>
+			<p>Source: <a href = "http://en.wikipedia.org/wiki/Vehicle_registration_plates_of_the_United_States">Wikipedia</a> and <a href = "http://www.worldlicenceplates.com/usa/US_XCCX.html">Plates Portal</a></p>
+			<p>Disclaimer: Information is provided "as is" with no express or implied warranty for completeness or accuracy.</p>
+		</div>
+	</div>
+	
+
+
+</body>
+</html>
